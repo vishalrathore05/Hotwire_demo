@@ -1,0 +1,9 @@
+ <!-- app/views/items/index.html.erb -->
+<h1>Items</h1>
+
+<%= turbo_frame_tag 'items' do %>
+  <% @items.each do |item| %>
+    <%= render item %>
+  <% end %>
+  <%= link_to 'New Item', new_item_path, data: { turbo_frame: 'items' } %>
+<% end %>

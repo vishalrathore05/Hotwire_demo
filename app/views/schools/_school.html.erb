@@ -1,0 +1,12 @@
+<!-- app/views/schools/_school.html.erb -->
+<%= turbo_frame_tag dom_id(school) do %>
+  <div id="<%= dom_id(school) %>">
+    <p>
+      <strong>Name:</strong>
+      <%= school.name %>
+    </p>
+    <%= link_to "Show", school %> |
+    <%= link_to "Edit", edit_school_path(school), data: { turbo_frame: dom_id(school) } %> |
+    <%= link_to "Destroy", school, data: { turbo_method: 'delete',  confirm: "Are you sure?" } %>
+  </div>
+<% end %>

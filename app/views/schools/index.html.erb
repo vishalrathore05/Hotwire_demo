@@ -1,0 +1,10 @@
+<!-- app/views/schools/index.html.erb -->
+<h1>Schools</h1>
+
+<%= turbo_frame_tag "schools" do %>
+  <%= render @schools %>
+<% end %>
+
+<%= link_to "New School", new_school_path, data: { turbo_frame: "school_form" } %>
+
+<%= turbo_frame_tag "school_form" %>

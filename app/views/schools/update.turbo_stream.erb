@@ -1,0 +1,4 @@
+<!-- app/views/schools/update.turbo_stream.erb -->
+<%= turbo_stream.replace dom_id(@school) do %>
+  <%= render @school %>
+<% end %>

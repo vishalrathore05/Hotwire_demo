@@ -1,0 +1,12 @@
+<!---then where post render each post has uniqe id 'post' ---->
+<%= turbo_frame_tag 'post' do %>    
+  <p>
+    <strong>Title:</strong>
+    <%= post.title %>
+  </p>
+  <!---here are the edit button with same name  turbo frame post ---->
+  <%= link_to 'Edit', edit_post_path(post), data: { turbo_frame: 'post' } %>
+
+<!---- so when user click on the edit button it check the id of turbo frame is match or not 
+--->
+<% end %>

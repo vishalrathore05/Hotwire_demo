@@ -1,0 +1,11 @@
+ 
+     <!---here we create one turbo frame tag name 'post' --->
+      <%= turbo_frame_tag 'post_1' do %>
+        <% @posts.each do |post| %>
+          <%= render post %>
+        <% end %>
+        <p>
+         </p>
+      <% end %>
+ 
+<%= link_to "New post", new_post_path, data: { turbo_frame: 'frame_2' } %>
